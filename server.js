@@ -29,18 +29,9 @@ app.get('/', async function (request, response) {
     
     
     
-    response.render('listing.liquid', { listingData: listingJSON.data })
+    response.render('listing.liquid')
     
 })
-
-
-
-
-
-
-
-
-
 
 
 
