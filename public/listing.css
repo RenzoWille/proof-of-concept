@@ -34,10 +34,25 @@
     padding-top: 1em;
     text-align: center;
 
+    .map-icon {
+        transition: transform ease-in-out 0.3s;
+
+        &:hover {
+            transform: scale(0.97);
+        }
+    }
+
+    
+
     .map-text {
         text-decoration: none;
         padding-top: .25rem;
         color: #0071b3;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
   }
 
@@ -94,5 +109,5 @@
 .text-price {
     padding-left: .225em;
     padding-top: .8em;
-    /* font-weight: bold; */
+    font-weight: bold;
 }
