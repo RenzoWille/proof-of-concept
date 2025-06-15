@@ -24,14 +24,20 @@ app.engine('liquid', engine.express())
 app.set('views', './views')
 
 // Routes
-app.get('/', async function (request, response) {
-    const listingURL = ''
+app.get('/house/:id', async function (request, response) {
+
+    const houseId = request.params.id;
+    const housesURL = `https://fdnd-agency.directus.app/items/f_houses/${houseId}`;
     
-    
-    
-    response.render('listing.liquid')
-    
-})
+    const housesResponse = await fetch(housesURL);
+    const housesJSON = await housesResponse.json();
+    const house = housesJSON.data;
+
+    response.render('listing.liquid', { house });
+});
+
+
+
 
 
 
