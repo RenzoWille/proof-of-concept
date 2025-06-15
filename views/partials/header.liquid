@@ -12,7 +12,7 @@
 <body>
 
     <nav class="nav-bar">
-        <button class="hamburger-menu">
+        <button class="hamburger-menu" id="toggle-menu" aria-label="Toggle menu">
             <svg width="38" height="52" viewBox="0 0 38 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="38" height="52" rx="4" fill="#FF9B21" />
                 <path
@@ -29,14 +29,13 @@
                     fill="white" />
             </svg>
 
-            <ul class="nav-links">
-                <li>
-                    <a href="#">Kopen</a>
-                    <a href="#">Huren</a>
-                    <a href="#">Verkopen</a>
-                </li>
-            </ul>
         </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Kopen</a></li>
+            <li><a href="#">Huren</a></li>
+            <li><a href="#">Verkopen</a></li>
+        </ul>
 
         <a href="https://www.funda.nl/">
             <svg class="logo" width="88" height="32" viewBox="0 0 88 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,3 +119,14 @@
             </a>
         </div>
     </nav>
+
+    <body>
+
+        <script>
+            const toggleBtn = document.getElementById('toggle-menu');
+            const navLinks = document.getElementById('nav-links');
+
+            toggleBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('show');
+            });
+        </script>
