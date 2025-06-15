@@ -1,0 +1,12 @@
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;  
+}
+
+.carousel-slide {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
