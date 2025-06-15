@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    font-family: 'Proxima Nova', sans-serif;
 }
 
 .nav-bar {
@@ -38,15 +39,54 @@
         padding-bottom: .75rem;
     }
 
+    .hidden-nav-links {
+        opacity: 0;
+    }
+
     .nav-buttons {
         margin-left: auto;
+        display: flex;
+        flex-direction: row;
 
         a {
             text-decoration: none;
         }
     }
+}
 
-    @media (max-width: 425px) {
+@media (min-width: 760px) {
+    .nav-bar {
+        .hamburger-menu {
+            display: none;
+        }
 
+        .nav-links {
+            z-index: 10;
+        }
+
+        .logo {
+            padding-left: 1rem;
+        }
+
+        .nav-buttons {
+            padding-right: 1rem;
+        }
+
+
+        .hidden-nav-links {
+            opacity: 1;
+            list-style-type: none;
+            gap: .5rem;
+            align-items: center;
+
+
+            a {
+                text-decoration: none;
+                color: white;
+                padding: .625rem .5rem;
+            }
+
+        }
     }
+
 }
