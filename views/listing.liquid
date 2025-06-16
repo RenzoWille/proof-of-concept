@@ -149,8 +149,8 @@
 
     <section class="address">
 
-        <h1 class="street"> {{ house.street }} {{ house.house_nr }}</h1>
-        <p class="text-zipcode"> {{ house.postal_code }} {{ house.city }}</p>
+        <h1 class="street"> {{ house.street }} {{ house.house_nr }} </h1>
+        <p class="text-zipcode"> {{ house.postal_code }} {{ house.city }} </p>
         {% render 'partials/map-address.liquid' %}
     </section>
 
@@ -176,7 +176,7 @@
                 d="M20 9.99854L22 12.9985V17.7485C22 18.1627 21.6642 18.4985 21.25 18.4985H19.5V19.2485C19.5 19.6627 19.1642 19.9985 18.75 19.9985C18.3358 19.9985 18 19.6627 18 19.2485V18.4985H6V19.2485C6 19.6627 5.66421 19.9985 5.25 19.9985C4.83579 19.9985 4.5 19.6627 4.5 19.2485V18.4985H2.75C2.33579 18.4985 2 18.1627 2 17.7485V12.9985L4 9.99854V4.74854C4 4.33432 4.33579 3.99854 4.75 3.99854H19.25C19.6642 3.99854 20 4.33432 20 4.74854V9.99854ZM18.5 5.49854H5.5V8.49854H8.5V7.74854C8.5 7.33432 8.83579 6.99854 9.25 6.99854H14.75C15.1642 6.99854 15.5 7.33432 15.5 7.74854V8.49854H18.5V5.49854ZM5.5 9.99854L3.5 12.9985H20.5L18.5 9.99854H15.5V10.7485C15.5 11.1627 15.1642 11.4985 14.75 11.4985H9.25C8.83579 11.4985 8.5 11.1627 8.5 10.7485V9.99854H5.5ZM3.5 16.9985V14.4985H20.5V16.9985H3.5ZM10 8.49854V9.99854H14V8.49854H10Z"
                 fill="#4D4D4D" />
         </svg>
-        <p class="text-icons"> {{house.rooms}}</p>
+        <p class="text-icons"> {{house.rooms}} </p>
 
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -232,7 +232,7 @@
 
     <section class="description">
         <h2>Omschrijving</h2>
-        <p>{{ house.description }}</p>
+        <p> {{ house.description }} </p>
     </section>
 
 </main>
