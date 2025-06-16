@@ -111,3 +111,11 @@
     padding-top: .8em;
     font-weight: bold;
 }
+
+.description {
+    padding: .75rem;
+
+    p{
+        padding-top: .2rem;
+    }
+}
