@@ -124,10 +124,12 @@
 
         <script>
 
-
+            // de button en links aanspreken
             const toggleBtn = document.getElementById('toggle-menu');
             const navLinks = document.getElementById('nav-links');
-            
+
+
+            // een click event toevoegen op het menu waardoor er na de klik een extra class name wordt toegevoegd en het menu wordt geopend
             toggleBtn.addEventListener('click', () => {
                 navLinks.classList.toggle('show');
             });
