@@ -17,6 +17,19 @@
     right: 20px;
     display: flex;
     z-index: 10;
+
+    button {
+        background: none;
+        border: none;
+        height: 0px;
+        cursor: pointer;
+        transition: transform ease-in-out 0.3s;
+        padding: 0;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
 }
 
 .address {

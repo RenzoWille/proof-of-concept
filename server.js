@@ -36,6 +36,20 @@ app.get('/house/:id', async function (request, response) {
     response.render('listing.liquid', { house });
 });
 
+app.post('/favourite-house/:id', async function (request, response) {
+    await fetch("https://fdnd.directus.app/items/messages", {
+        
+        method: "POST",
+        body: JSON.stringify({
+            
+            for: "Renzo_" + request.body.name,
+
+            house_id: request.params.id
+        }),
+    })
+    response.redirect(303, '/house/'+request.params.id)
+})
+
 
 
 
