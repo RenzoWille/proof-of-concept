@@ -148,7 +148,7 @@ h2 {
     font-family: var(--font-proxima-semibold);
 }
 
-p {
+p, a {
     font-family: var(--font-proxima-regular);
     font-size: var(--font-size-m);
     line-height: 1.5em;
