@@ -1,0 +1,159 @@
+@font-face {
+    font-family: var(--font-proxima-black);
+    src: url('/fonts/ProximaNova/ProximaNova-Black_1553558671[2250].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-black-it);
+    src: url('/fonts/ProximaNova/ProximaNova-BlackIt_1286208078[2251].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-bold);
+    src: url('/fonts/ProximaNova/ProximaNova-Bold_1760577842[2252].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-bold-it);
+    src: url('/fonts/ProximaNova/ProximaNova-BoldIt_2994281201[2253].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-extrabold);
+    src: url('/fonts/ProximaNova/ProximaNova-Extrabld_2192138475[2254].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-extrabold-it);
+    src: url('/fonts/ProximaNova/ProximaNova-ExtrabldIt_4227116202[2255].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-light);
+    src: url('/fonts/ProximaNova/ProximaNova-Light_3792215210[2256].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-light-it);
+    src: url('/fonts/ProximaNova/ProximaNova-LightIt_1161191529[2257].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-medium);
+    src: url('/fonts/ProximaNova/ProximaNova-Medium_2770618388[2258].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-medium-it);
+    src: url('/fonts/ProximaNova/ProximaNova-MediumIt_2082791891[2259].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-regular);
+    src: url('/fonts/ProximaNova/ProximaNova-Regular_2607783814.otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-regular-it);
+    src: url('/fonts/ProximaNova/ProximaNova-RegularIt_206118725[2261].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-semibold);
+    src: url('/fonts/ProximaNova/ProximaNova-Semibold_3872794340.otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-semibold-it);
+    src: url('/fonts/ProximaNova/ProximaNova-SemiboldIt_4267074723[2263].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-thin);
+    src: url('/fonts/ProximaNova/ProximaNovaT-Thin_3983845273[2265].otf') format('opentype');
+}
+
+@font-face {
+    font-family: var(--font-proxima-thin-it);
+    src: url('/fonts/ProximaNova/ProximaNova-ThinIt_1816945667[2264].otf') format('opentype');
+}
+
+
+body {
+    /* fonts */
+    --font-proxima-black: 'ProximaNova-Black';
+    --font-proxima-black-it: 'ProximaNova-BlackIt';
+    --font-proxima-bold: 'ProximaNova-Bold';
+    --font-proxima-bold-it: 'ProximaNova-BoldIt';
+    --font-proxima-extrabold: 'ProximaNova-Extrabld';
+    --font-proxima-extrabold-it: 'ProximaNova-ExtrabldIt';
+    --font-proxima-light: 'ProximaNova-Light';
+    --font-proxima-light-it: 'ProximaNova-LightIt';
+    --font-proxima-medium: 'ProximaNova-Medium';
+    --font-proxima-medium-it: 'ProximaNova-MediumIt';
+    --font-proxima-regular: 'ProximaNova-Regular';
+    --font-proxima-regular-it: 'ProximaNova-RegularIt';
+    --font-proxima-semibold: 'ProximaNova-Semibold';
+    --font-proxima-semibold-it: 'ProximaNova-SemiboldIt';
+    --font-proxima-thin: 'ProximaNovaT-Thin';
+    --font-proxima-thin-it: 'ProximaNova-ThinIt';
+
+    /* font-sizes */
+    --font-size-xxxl: 3.5rem;
+    /* 48px ÷ 16 = 3rem */
+    --font-size-xxl: 3rem;
+    /* 48px ÷ 16 = 3rem */
+    --font-size-xl: 2.375rem;
+    /* 38px ÷ 16 = 2.375rem */
+    --font-size-l: 2rem;
+    /* 32px ÷ 16 = 2rem */
+    --font-size-xm: 1.5rem;
+    /* 24px */
+    --font-size-xxm: 1.25em;
+    /*20px*/
+    --font-size-m: 1rem;
+    /*16px, voor de header*/
+    --font-size-s: .9rem;
+    --font-size-xs: 0.875rem;
+    /* 14px ÷ 16 = 0.875rem */
+    --font-size-xxs: .75em;
+    /*12px*/
+
+    /* colors */
+    --color-orange: #ff9b21;
+    --color-orange-hover: #f6951f;
+    --color-brown: #6a281c;
+    --color-white: #ffffff;
+    --color-broken-white: #f8f0e6;
+    --color-lightblue: #e5f6ff;
+    --color-blue: #2a8fd8;
+    --color-border: #e6e6e6;
+    --color-light-grey: #999999;
+    --color-light-grey-hover: #817f7f;
+    --color-grey: #4d4d4d;
+    --color-ing: #f86700;
+
+    --border: solid 1px var(--color-border);
+
+
+}
+
+h1 {
+    font-family: var(--font-proxima-semibold);
+    font-size: var(--font-size-xxm);
+}
+
+h2 {
+    font-size: var(--font-size-m);
+    font-family: var(--font-proxima-semibold);
+}
+
+p {
+    font-family: var(--font-proxima-regular);
+    font-size: var(--font-size-m);
+    line-height: 1.5em;
+}
+
+button {
+    all: unset;
+}
