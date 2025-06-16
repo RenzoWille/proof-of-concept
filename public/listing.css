@@ -73,7 +73,8 @@
     font-size: var(--font-size-m);
     grid-column: 1/2;
     grid-row: 2/3;
-    padding: .5em 0 0 .7em;
+    line-height: 0;
+    padding: .7rem;
     color: hsl(0 0% 60% / 1);
 }
 
@@ -118,7 +119,8 @@
 .text-price {
     padding-left: .225em;
     padding-top: .8em;
-    font-weight: bold;
+    font-size: var(--font-size-xxm);
+    font-family: var(--font-proxima-semibold);
 }
 
 .description {
