@@ -38,31 +38,38 @@ app.get('/house/:id', async function (request, response) {
   
     response.render('listing.liquid', { house, likedHouses });
   });
-  
 
-// app.get('/favourites', async function (request, response) {
-//     const houseId = request.params.id;
-//     const likeURL = `https://fdnd.directus.app/items/messages?filter[from][_eq]=renzo`;
-
-//     const likesResponse = await fetch(likeURL);
-//     const likesJSON = await likesResponse.json();
-//     const like = likeJSON.data;
-
-//     const housesURL = `https://fdnd-agency.directus.app/items/f_houses/${houseId}`;
-    
-//     const housesResponse = await fetch(housesURL);
-//     const housesJSON = await housesResponse.json();
-//     const house = housesJSON.data;
-
-//     response.render('listing.liquid', { house });
-// })
-
+// POST
   app.post('/house', async (req, res) => {
     const houseID = req.body.houseID;
  
     try {
       const response = await fetch('https://fdnd.directus.app/items/messages', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from: 'renzo',
+          id: houseID
+        })
+      });
+ 
+      res.redirect(`/house/${houseID}`);
+ 
+    } catch (error) {
+      console.error("Something went wrong in the page check error:",error);
+    }
+  });
+
+
+  // DELETE 
+  app.post('/house', async (req, res) => {
+    const houseID = req.body.houseID;
+ 
+    try {
+      const response = await fetch('https://fdnd.directus.app/items/messages', {
+        method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
         },
