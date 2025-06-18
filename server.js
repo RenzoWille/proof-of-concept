@@ -36,25 +36,44 @@ app.get('/house/:id', async function (request, response) {
     response.render('listing.liquid', { house });
 });
 
-app.post('/house/:id', async function (request, response) {
-    await fetch("https://fdnd.directus.app/items/messages", {
-        
-        method: "POST",
+// app.get('/favourites', async function (request, response) {
+//     const houseId = request.params.id;
+//     const likeURL = `https://fdnd.directus.app/items/messages?filter[from][_eq]=renzo`;
+
+//     const likesResponse = await fetch(likeURL);
+//     const likesJSON = await likesResponse.json();
+//     const like = likeJSON.data;
+
+//     const housesURL = `https://fdnd-agency.directus.app/items/f_houses/${houseId}`;
+    
+//     const housesResponse = await fetch(housesURL);
+//     const housesJSON = await housesResponse.json();
+//     const house = housesJSON.data;
+
+//     response.render('listing.liquid', { house });
+// })
+
+  app.post('/house', async (req, res) => {
+    const houseID = req.body.houseID;
+ 
+    try {
+      const response = await fetch('https://fdnd.directus.app/items/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
         body: JSON.stringify({
-
-            for: "Renzo_" + request.body.name,
-
-            house_id: request.params.id
-        }),
-    })
-    response.redirect(303, '/house/'+request.params.id)
-})
-
-
-
-
-
-
+          from: 'renzo',
+          text: houseID
+        })
+      });
+ 
+      res.redirect(`/house/${houseID}`);
+ 
+    } catch (error) {
+      console.error("Something went wrong in the page check error:",error);
+    }
+  });
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000; als deze applicatie ergens gehost wordt, waarschijnlijk poort 80
