@@ -25,16 +25,20 @@ app.set('views', './views')
 
 // Routes
 app.get('/house/:id', async function (request, response) {
-
     const houseId = request.params.id;
     const housesURL = `https://fdnd-agency.directus.app/items/f_houses/${houseId}`;
-    
     const housesResponse = await fetch(housesURL);
     const housesJSON = await housesResponse.json();
     const house = housesJSON.data;
-
-    response.render('listing.liquid', { house });
-});
+  
+    const likeURL = `https://fdnd.directus.app/items/messages?filter[from][_eq]=renzo`;
+    const likesResponse = await fetch(likeURL);
+    const likesJSON = await likesResponse.json();
+    const likedHouses = likesJSON.data;
+  
+    response.render('listing.liquid', { house, likedHouses });
+  });
+  
 
 // app.get('/favourites', async function (request, response) {
 //     const houseId = request.params.id;
@@ -64,7 +68,7 @@ app.get('/house/:id', async function (request, response) {
         },
         body: JSON.stringify({
           from: 'renzo',
-          text: houseID
+          id: houseID
         })
       });
  
