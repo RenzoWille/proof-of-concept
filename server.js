@@ -40,27 +40,33 @@ app.get('/house/:id', async function (request, response) {
   });
 
 // POST
-  app.post('/house', async (req, res) => {
+
+app.post('/house', async (req, res) => {
+    // Haalt het 'houseID' op uit het body van de request vanuit een formulier
     const houseID = req.body.houseID;
- 
+  
     try {
+      // Maakt een POST-verzoek naar de Directus API om een nieuwe like toe te voegen
       const response = await fetch('https://fdnd.directus.app/items/messages', {
-        method: 'POST',
+        method: 'POST', 
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json' 
         },
         body: JSON.stringify({
-          from: 'renzo',
-          id: houseID
+          from: 'renzo', // Een afzender met de naam Renzo die de like naar de database post
+          id: houseID    // De ID van het huis dat is meegegeven in de request
         })
       });
- 
+  
+      // Als het verzoek succesvol is, wordt de gebruiker doorgestuurd naar de detailpagina van het huis
       res.redirect(`/house/${houseID}`);
- 
+  
     } catch (error) {
-      console.error("Something went wrong in the page check error:",error);
+      // Als er een fout optreedt, wordt deze gelogd in de console
+      console.error("Something went wrong in the page check error:", error);
     }
   });
+  
 
 
   // DELETE 
@@ -68,13 +74,14 @@ app.get('/house/:id', async function (request, response) {
     const houseID = req.body.houseID;
  
     try {
+         // Maakt een DELETE-verzoek naar de Directus API om een nieuwe like te verwijderen
       const response = await fetch('https://fdnd.directus.app/items/messages', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: 'renzo',
+          from: 'renzo', // Een afzender met de naam Renzo die de like naar de database verwijdert
           id: houseID
         })
       });
