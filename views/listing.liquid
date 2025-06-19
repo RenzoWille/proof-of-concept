@@ -77,7 +77,7 @@
             <input type="hidden" name="houseID" value="{{ house.id }}">
             <button type="submit" class="like-button">
 
-                <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="like-icon" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_dd_110_4616)">
                         <path
                             d="M6 6C6 3.79086 7.79086 2 10 2H46C48.2091 2 50 3.79086 50 6V42C50 44.2091 48.2091 46 46 46H10C7.79086 46 6 44.2091 6 42V6Z"
@@ -248,6 +248,25 @@
     <h2>Omschrijving</h2>
     <p> {{ house.description }} </p>
 </section>
+
+
+<script>
+document.querySelectorAll('.like-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const svg = this.querySelector('.like-icon');
+
+        // Verwijder eerst de class als hij er al op zit (zodat hij opnieuw kan afspelen)
+        svg.classList.remove('bounce');
+        
+        // Forceer reflow zodat de animatie opnieuw kan beginnen
+        void svg.offsetWidth;
+
+        // Voeg de class weer toe
+        svg.classList.add('bounce');
+    });
+});
+</script>
+
 
 </main>
 

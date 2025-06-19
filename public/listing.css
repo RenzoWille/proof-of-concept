@@ -18,6 +18,15 @@
     display: flex;
     z-index: 10;
 
+    .like-icon {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .like-icon.bounce {
+        animation: bounce-animation 400ms ease;
+    }
+
+
     button {
         background: none;
         border: none;
@@ -31,6 +40,15 @@
         }
     }
 }
+
+@keyframes bounce-animation {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.3); }
+    50%  { transform: scale(0.95); }
+    70%  { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}    
+
 
 .address {
     display: grid;
