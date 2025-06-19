@@ -28,6 +28,11 @@ Als gebruiker van de website wil ik zo veel mogelijk informatie op doen over het
 ### Hoe het werkt
 De website kan op verschillende manieren bestuurd worden. Zo kunnen gebruikers door de website heen tabben, en natuurlijk besturen met de muis. De gebruiker kan een specifieke listing favorieten, en dat zal een leuke interactie laten zien. Deze like wordt doorgestuurd naar de database, zodat deze wordt opgeslagen.
 
+### Ontwerpkeuzes
+Voor de opdracht wilde ik me zo veel mogelijk aan het gegeven ontwerp houden, maar wat extra leuke dingen toevoegen om bijvoorbeeld het hamburger menuutje wat interactiever te maken.
+
+Ik heb hier gekozen om de links in het scherm te laten sliden, zodat het een leuk effect zou krijgen en de gebruiker zou zien dat het een interactief hamburger menuutje is. Ook voor het favorieten van een huis is er gekozen voor een bouncy effect om aan de gebruiker te laten zien dat de like is doorgekomen. Dit is een goede vorm van feedback. Ook feedforward is toegepast op de button, als je er namelijk overheen hovert, vergroot het hartje een beetje zodat het laat zien dat er op geklikt kan worden.
+
 ## Kenmerken
 
 ### Technieken
